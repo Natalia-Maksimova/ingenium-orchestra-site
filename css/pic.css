@@ -1,0 +1,327 @@
+﻿
+
+/* Настройки блока с картинками */
+.wrapper {
+    position: relative; /* ← добавить */
+    width: 500px;
+    height: 500px;
+    border: 20px solid #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    z-index: 2;
+}
+
+#body {
+    background: #97C225;
+    background: radial-gradient(circle closest-corner at 110px 100px, white, #97C225);
+    width: 175px;
+    height: 150px;
+    margin-top: 220px;
+    margin-left: 50px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#tail {
+    width: 220px;
+    height: 200px;
+    margin-top: 100px;
+    margin-left: 30px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: -30px 20px 0 0 #97C225;
+}
+
+#neck {
+    background: #97C225;
+    width: 50px;
+    height: 65px;
+    margin-top: 180px;
+    margin-left: 180px;
+    transform: rotate(30deg);
+    z-index: 1;
+    position: absolute;
+}
+.head {
+    background: #97C225;
+    width: 105px;
+    height: 90px;
+    margin-top: 130px;
+    margin-left: 195px;
+    transform: rotate(30deg);
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#floor {
+    background: repeating-linear-gradient( 90deg, yellow, yellow 30px, orange 30px, orange 60px );
+    width: 500px;
+    height: 100px;
+    margin-top: 400px;
+    position: absolute;
+    z-index: -1;
+}
+
+.hand {
+    position: relative;
+    width: 100px;
+    height: 80px;
+}
+
+    .hand:before,
+    .hand:after {
+        content: "";
+        position: absolute;
+        left: 50px;
+        top: 0;
+        width: 25px;
+        height: 75px;
+        margin-top: 230px;
+        margin-left: 175px;
+        background: #7DA021;
+        border-radius: 50px;
+        transform: rotate(-70deg);
+        transform-origin: 0 100%;
+        z-index: 2;
+    }
+
+    .hand:after {
+        left: 0;
+        transform: rotate(180deg);
+        height: 45px;
+        width: 30px;
+        border-radius: 50%;
+        transform-origin: 100% 105%;
+    }
+
+.shifted { 
+    transform: translate(40px, -90px);
+    z-index: 0;
+}
+
+.hand.shifted:before,
+.hand.shifted:after {
+    background: #607C1A;
+}
+
+.leg {
+    position: relative;
+    width: 95px;
+    height: 80px;
+    top: 165px;
+    left: 30px;
+}
+
+    .leg:before,
+    .leg:after {
+        content: "";
+        position: absolute;
+        left: 50px;
+        top: 0;
+        width: 30px;
+        height: 80px;
+        border-radius: 0 0 25% 25%;
+        background: #7DA021;
+        transform: rotate(15deg);
+        transform-origin: 0 100%;
+        z-index: 1;
+    }
+
+    .leg:after {
+        left: 68px;
+        top: 62px;
+        background: radial-gradient(circle closest-corner at 70%, white, #7DA021);
+        border-radius: 50% / 100% 100% 0 0;
+        transform: rotate(10deg);
+        width: 65px;
+        height: 35px;
+        transform-origin: 100% 100%;
+    }
+
+    .leg.shifted:before,
+    .leg.shifted:after {
+        margin-left: 10px;
+        background: radial-gradient(circle closest-corner at 70%, white, #607C1A);
+    }
+    .leg.shifted:before {
+        background: #607C1A;
+    }
+.horns {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    transform: rotate(-30deg);
+}
+    .horns::after,
+    .horns::before {
+        content: "";
+        background: #97C225;
+        position: absolute;
+        width: 5px;
+        height: 40px;
+        left: 30px;
+        transform: rotate(10deg);
+    }
+.horns::before {
+    transform: rotate(-20deg);
+    left: 8px;
+}
+
+.eyes {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    left: 20px;
+    bottom: 25px;
+    transform: rotate(-30deg);
+}
+
+    .eyes::after,
+    .eyes::before {
+        content: "";
+        background: radial-gradient(circle closest-corner at 90% 60%, white 50%, black 50%);
+        position: absolute;
+        width: 12px;
+        height: 25px;
+        border-radius: 50%;
+        left: 30px;
+        bottom: 10px;
+    }
+
+    .eyes::before {
+        left: 8px;
+        bottom: 5px;
+    }
+
+.nose {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    left: 60px;
+    bottom: 30px;
+    transform: rotate(-30deg);
+}
+
+    .nose::after,
+    .nose::before {
+        content: "";
+        background: black;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        left: 20px;
+        bottom: 10px;
+    }
+
+    .nose::before {
+        left: 8px;
+        bottom: 5px;
+    }
+
+.tooth {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 14px solid yellow;
+    left: 60px;
+    bottom: 15px;
+}
+.bottom-left-tooth {
+    position: absolute;
+    left: 77px;
+    bottom: 5px;
+    transform: rotate(-25deg)
+}
+.bottom-right-tooth {
+    position: absolute;
+    left: 90px;
+    bottom: 13px;
+    transform: rotate(-35deg)
+}
+.right-tooth {
+    position: absolute;
+    left: 100px;
+    bottom: 25px;
+    transform: rotate(-60deg)
+}
+.grass {
+    position: relative;
+    width: 170px;
+    height: 300px;
+    left: 350px;
+    bottom: 100px;
+}
+    .grass::before,
+    .grass::after {
+        position: absolute;
+        content: "";
+        width: 170px;
+        height: 300px;
+        border-radius: 50%;
+        box-shadow: -10px -5px 0 0 #00CF00;
+        z-index: -2
+    }
+    .grass::after {
+        left: 50px;
+        top: 20px;
+    }
+.grass-mirrored {
+    position: relative;
+    width: 170px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 10px -5px 0 0 #00CF00;
+    bottom: 385px;
+    left: 330px;
+    z-index:-2;
+}
+
+/* Ветка */
+.branch {
+    position: relative;
+    width: 800px;
+    height: 700px;
+    bottom: 970px;
+    left: 280px;
+    box-shadow: 15px -25px 0 0 #6B2E2E;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Общие стили для листьев */
+.leaf {
+    position: relative;
+    background: #00CF00;
+    border-radius: 50%;
+    width: 100px;
+    height: 20px;
+    z-index: -1;
+}
+
+/* Левый верхний лист */
+.leaf-1 {
+    top:150px;
+    left:70px;
+    transform: rotate(70deg);
+}
+
+/* Правый верхний лист (на конце ветки) */
+.leaf-2 {
+    top: 70px;
+    left: 145px;
+    transform: rotate(40deg);
+}
+
+/* Нижний лист (свисающий) */
+.leaf-3 {
+    top: 20px;
+    left: 30px;
+    transform: rotate(20deg);
+}
