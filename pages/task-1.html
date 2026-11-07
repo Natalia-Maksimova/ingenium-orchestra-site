@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Структура документа, семантические теги и организация контента.">
+    <title>Практическая работа 1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pic.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html">
+                <span class="logo"><span></span></span>
+                <span>
+                    INGENIUM
+                    <small class="brand-subtitle">ORCHESTRA</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Открыть меню">Меню ☰</button>
+
+            <nav class="nav">
+                <a href="../index.html">Главная</a>
+                <a href="history.html">История</a>
+                <a href="orchestra.html">Оркестр</a>
+                <a href="gallery.html">Галерея</a>
+                <a href="assignments.html">Задания</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-intro">
+            <div class="container">
+                <div class="breadcrumbs"><a href="assignments.html">ЗАДАНИЯ</a> / РАБОТА 1</div>
+                <div class="eyebrow">Практическая работа 1</div>
+                <h1>Рисунок CSS</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container article-layout">
+                <article class="article">
+                    <h2>Цель работы</h2>
+                    <p>Создать рисунок, с помощью стилевой таблицы pic.css. Базовый размер 200х200px.</p>
+                    <h2>Результат</h2>
+                    <div class="wrapper">
+                        <div id="body"></div>
+                        <div id="tail"></div>
+                        <div id="floor"></div>
+                        <div id="neck"></div>
+
+                        <div class="head">
+                            <div class="horns"></div>
+                            <div class="eyes"></div>
+                            <div class="nose"></div>
+                            <div class="tooth"></div>
+                            <div class="tooth bottom-left-tooth"></div>
+                            <div class="tooth bottom-right-tooth"></div>
+                            <div class="tooth right-tooth"></div>
+                        </div>
+                        <div class="hand"></div>
+                        <div class="hand shifted"></div>
+                        <div class="leg"></div>
+                        <div class="leg shifted"></div>
+
+                        <div class="grass"></div>
+                        <div class="grass-mirrored"></div>
+
+                        <div class="branch">
+                            <div class="leaf leaf-1"></div>
+                            <div class="leaf leaf-2"></div>
+                            <div class="leaf leaf-3"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="sidebar">
+                    <h3>Раздел задания</h3>
+                    <a href="assignments.html">← Все задания</a>
+                    <a href="coursework.html">Курсовая работа</a>
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div>
+                    <h3>Ingenium orchestra</h3>
+                    <p>Студенческий оркестр Политехнического университета. Музыка, которая объединяет людей, идеи и поколения.</p>
+                </div>
+
+                <div>
+                    <h3>Разделы</h3>
+                    <a href="../index.html">Главная</a>
+                    <a href="../pages/history.html">История</a>
+                    <a href="../pages/orchestra.html">О коллективе</a>
+                    <a href="../pages/gallery.html">Галерея</a>
+                    <a href="../pages/assignments.html">Учебные задания</a>
+                </div>
+
+                <div>
+                    <h3>Присоединяйтесь</h3>
+                    <p>Новые музыканты и слушатели — всегда желанные гости.</p>
+
+                    <div class="social-links">
+                        <a class="social-link" href="https://t.me/piorchestra">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                            </svg>
+                            <span>Telegram</span>
+                        </a>
+
+                        <a class="social-link" href="https://vk.com/ingenium_orchestra">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.15 14.27h-1.46c-.55 0-.72-.44-1.72-1.44-.87-.85-1.25-.96-1.47-.96-.3 0-.39.08-.39.49v1.31c0 .35-.11.56-1.03.56-1.52 0-3.21-.92-4.4-2.63C6.36 11.63 5.93 9.87 5.93 9.5c0-.22.08-.42.49-.42h1.46c.36 0 .5.16.64.55.7 2.03 1.87 3.81 2.35 3.81.18 0 .26-.08.26-.54V10.7c-.06-.96-.56-1.04-.56-1.38 0-.16.13-.32.34-.32h2.29c.3 0 .41.16.41.52v3.36c0 .3.13.41.22.41.18 0 .33-.11.66-.44 1.02-1.14 1.75-2.9 1.75-2.9.1-.2.26-.39.62-.39h1.46c.44 0 .54.23.44.54-.18.83-1.96 3.34-1.96 3.34-.15.25-.21.36 0 .64.15.21.64.63.97 1.02.6.69 1.06 1.27 1.18 1.67.13.4-.08.6-.48.6z" />
+                            </svg>
+                            <span>ВКонтакте</span>
+                        </a>
+                    </div>
+
+                    <a class="join-btn" href="https://vk.ru/away.php?to=https%3A%2F%2Fforms.yandex.ru%2Fu%2F64ef43c669387211198aa0bb&utf=1">Присоединиться к оркестру →</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Ingenium orchestra — учебный проект</span>
+                <span>Сделано с интересом к музыке</span>
+            </div>
+        </div>
+    </footer>>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

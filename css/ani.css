@@ -1,0 +1,205 @@
+
+.wrapper {
+    position: relative;
+    font-size: 18px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background: radial-gradient( circle closest-corner at 50% 30%, white, plum );
+}
+
+.prince {
+    position: absolute;
+    width: 45%;
+    height: 75%;
+    bottom: 5%;
+    left: 3%;
+}
+
+.prince-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/prince2.png') no-repeat;
+    background-size: contain;
+}
+
+.prince-head {
+    position: absolute;
+    width: 35%;
+    height: 35%;
+    left: 28%;
+    top: 0;
+    background: url('../images/prince3.png') no-repeat;
+    background-size: contain;
+}
+
+.prince:hover .prince-head {
+    animation: headShake 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes headShake {
+    from {
+        transform: rotate(-3deg);
+    }
+
+    to {
+        transform: rotate(3deg);
+    }
+}
+
+.frog {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    right: 25%;
+    bottom: 5%;
+    opacity: 0;
+}
+
+    .frog::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('../images/frog1.png') no-repeat;
+        background-size: contain;
+    }
+
+.wrapper:hover .frog {
+    opacity: 1;
+    animation: frogMove 3s ease-in-out forwards;
+}
+
+@keyframes frogMove {
+    0% {
+        right: 0%;
+        bottom: 10%;
+    }
+    25% {
+        right: 5%;
+        bottom: 20%;
+    }
+
+    50% {
+        right: 10%;
+        bottom: 0%;
+    }
+
+    100% {
+        right: 25%;
+        bottom: 5%;
+    }
+}
+
+.frog:hover::before {
+    animation: frogJump 0.35s ease-in-out infinite alternate;
+}
+
+@keyframes frogJump {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-12px);
+    }
+}
+
+.princess {
+    position: absolute;
+    width: 45%;
+    height: 70%;
+    left: 45%;
+    bottom: 0;
+    background: url('../images/princess.png') no-repeat;
+    background-size: contain;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.caption {
+    position: absolute;
+    font-size: 90%;
+    font-family: sans-serif;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transform: rotate(15deg);
+}
+.caption-question {
+    left: 40%;
+    top: 30%;
+}
+.caption-answer {
+    left: 50%;
+    top: 15%;
+}
+.wrapper:hover .caption-question {
+    opacity: 1;
+}
+
+#magic:checked ~ .wrapper .caption-question {
+    opacity: 0;
+}
+
+/* После клика: ответ виден всегда */
+#magic:checked ~ .wrapper .caption-answer {
+    opacity: 1;
+}
+
+#magic {
+    display: none;
+}
+
+    #magic:checked ~ .wrapper .frog {
+        animation: frogDisappear 0.5s forwards;
+    }
+
+@keyframes frogDisappear {
+
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+#magic:checked ~ .wrapper .princess {
+    animation: princessAppear 2s ease-out forwards;
+}
+
+@keyframes princessAppear {
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    60% {
+        opacity: 0.6;
+        transform: scale(0.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#magic:checked ~ .wrapper {
+    animation: finalState 0.5s forwards;
+}
+
+@keyframes finalState {
+
+    from {
+        filter: sepia(0);
+    }
+
+    to {
+        filter: sepia(0.5);
+    }
+}
